@@ -13,18 +13,23 @@ import About from "./js/pages/About";
 import Contact from "./js/pages/Contact";
 import Model from "./js/pages/Model";
 import Home from "./js/pages/Home";
+import Footer from "./js/pages/Footer";
 
 const App = () => {
   return (
     <Router>
       <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/model" component={Model} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/about" component={About} />
-      </Switch>
+      <div className="container mt-5">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/model" component={Model} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </div>
+
+      <Footer />
     </Router>
   );
 };
