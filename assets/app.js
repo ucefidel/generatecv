@@ -1,20 +1,30 @@
-import ReactDOM, { HashRouter } from "react-dom";
+import ReactDOM from "react-dom";
 import React from "react";
-
+import NavBar from "./js/pages/NavBar";
+import { Route, BrowserRouter as Router } from "react-router-dom";
+import Login from "./js/pages/Login";
 // any CSS you import will output into a single css file (app.css in this case)
 import "./styles/app.css";
-
-// start the Stimulus application
+import "./styles/bootswatch.min.css";
 import "./bootstrap";
-import NavBar from "./js/pages/NavBar";
-import { Route, Router, Switch } from "react-router";
-import LoginPage from "./js/pages/LoginPage";
+import { Link } from "react-router-dom";
+import { Switch } from "react-router";
+import About from "./js/pages/About";
+import Contact from "./js/pages/Contact";
+import Model from "./js/pages/Model";
+import Home from "./js/pages/Home";
 
 const App = () => {
   return (
     <Router>
       <NavBar />
-      <Route path="/login" component={LoginPage} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/model" component={Model} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
+      </Switch>
     </Router>
   );
 };
