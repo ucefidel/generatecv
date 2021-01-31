@@ -1,19 +1,21 @@
+// Import of React Librabry
 import ReactDOM from "react-dom";
 import React from "react";
-import NavBar from "./js/pages/NavBar";
+import { Switch } from "react-router";
 import { Route, BrowserRouter as Router } from "react-router-dom";
-import Login from "./js/pages/Login";
-// any CSS you import will output into a single css file (app.css in this case)
+// Import of CSS
 import "./styles/app.css";
 import "./styles/bootswatch.min.css";
 import "./bootstrap";
-import { Link } from "react-router-dom";
-import { Switch } from "react-router";
+// Import of Component Page
+import Login from "./js/pages/Login";
+import NavBar from "./js/pages/NavBar";
 import About from "./js/pages/About";
 import Contact from "./js/pages/Contact";
 import Model from "./js/pages/Model";
 import Home from "./js/pages/Home";
 import Footer from "./js/pages/Footer";
+import $ from "jquery"
 
 const App = () => {
   return (
