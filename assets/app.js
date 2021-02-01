@@ -2,13 +2,13 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import { Switch } from "react-router";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router, HashRouter } from "react-router-dom";
 // Import of CSS
 import "./styles/app.css";
 import "./styles/bootswatch.min.css";
 import "./bootstrap";
 // Import of Component Page
-import Login from "./js/pages/Login";
+import Login from "./js/component/Login";
 import NavBar from "./js/pages/NavBar";
 import About from "./js/pages/About";
 import Contact from "./js/pages/Contact";
@@ -16,23 +16,25 @@ import Model from "./js/pages/Model";
 import Home from "./js/pages/Home";
 import Footer from "./js/pages/Footer";
 import $ from "jquery"
+import Registration from "./js/component/Registration";
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <NavBar />
-      <div className="container mt-5">
+      <main className="container mt-5">
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/model" component={Model} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/about" component={About} />
+          <Route path="/registration" component={Registration} />
+          <Route path="/login" component={Login} />
+          <Route path="/model" component={Model} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/about" component={About} />
+          <Route path="/" component={Home} />
         </Switch>
-      </div>
+      </main>
 
       <Footer />
-    </Router>
+    </HashRouter>
   );
 };
 

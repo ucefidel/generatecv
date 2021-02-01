@@ -21,6 +21,20 @@ const NavBar = () => {
                 </li>
             </ul>
 
+            <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                    <Link to="/registration" className="nav-link">Inscription</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/login" className="btn btn-secondary">Connexion</Link>
+                </li>
+                <li className="nav-item ml-3">
+                    <a href="#" className="btn btn-danger">
+                        Deconnexion
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </nav >
 };
