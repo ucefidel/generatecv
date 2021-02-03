@@ -22,7 +22,7 @@ const App = () => {
   return (
     <HashRouter>
       <NavBar />
-      <main className="container mt-5">
+      <main className="container mt-3">
         <Switch>
           <Route path="/registration" component={Registration} />
           <Route path="/login" component={Login} />
