@@ -2,7 +2,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import { Switch } from "react-router";
-import { Route, BrowserRouter as Router, HashRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 // Import of CSS
 import "./styles/app.css";
 import "./styles/bootswatch.min.css";
