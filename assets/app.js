@@ -1,40 +1,36 @@
-// Import of React Librabry
 import ReactDOM from "react-dom";
 import React from "react";
-import { Switch } from "react-router";
-import { Route, HashRouter } from "react-router-dom";
-// Import of CSS
+import NavBar from "./js/pages/NavBar";
+import { Route, BrowserRouter as Router } from "react-router-dom";
+import Login from "./js/pages/Login";
+// any CSS you import will output into a single css file (app.css in this case)
 import "./styles/app.css";
 import "./styles/bootswatch.min.css";
 import "./bootstrap";
-// Import of Component Page
-import Login from "./js/component/Login";
-import NavBar from "./js/pages/NavBar";
+import { Link } from "react-router-dom";
+import { Switch } from "react-router";
 import About from "./js/pages/About";
 import Contact from "./js/pages/Contact";
 import Model from "./js/pages/Model";
 import Home from "./js/pages/Home";
 import Footer from "./js/pages/Footer";
-import $ from "jquery"
-import Registration from "./js/component/Registration";
 
 const App = () => {
   return (
-    <HashRouter>
+    <Router>
       <NavBar />
-      <main className="container mt-3">
+      <div className="container mt-5">
         <Switch>
-          <Route path="/registration" component={Registration} />
-          <Route path="/login" component={Login} />
-          <Route path="/model" component={Model} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/about" component={About} />
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/model" component={Model} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/about" component={About} />
         </Switch>
-      </main>
+      </div>
 
       <Footer />
-    </HashRouter>
+    </Router>
   );
 };
 
